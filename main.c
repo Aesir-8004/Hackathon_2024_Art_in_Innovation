@@ -49,7 +49,32 @@ do
 } while (menu_choice != 4);
 
 
+int line_choice = 0;
 
+inital_coord_input(starting_point);
+line_choice = dia_or_straight();
+
+switch (line_choice)
+{
+case 1:
+	drawing_out_line(canvas_board[][20], 20, 20, startingpoint.rows, startingpoint.cols, '-');
+	break;
+case 2: 
+	drawing_out_line(canvas_board[][20], 20, 20, startingpoint.rows, startingpoint.cols, '|');
+	break;
+case 3: 
+	drawing_out_line(canvas_board[][20], 20, 20, startingpoint.rows, startingpoint.cols, '/');
+	break;
+case 4: 
+	drawing_out_line(canvas_board[][20], 20, 20, startingpoint.rows, startingpoint.cols, '\\');
+	break;
+
+default:
+	printf("Error in input"); 
+}
+
+//done input -> do while
+// ask if done after each point 
 
 
 
