@@ -17,6 +17,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <Windows.h>
+#include <time.h>
 
 typedef struct coords
 {
