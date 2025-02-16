@@ -4,7 +4,7 @@ int main(void)
 {
 	int menu_choice = 0; 
 Canvas canvasBoard[10];
-char symbol = '-';
+char symbol = ' ';
 char tutorial_arr[] = { 'e','d','c','z','x','a','q','w','o' };
 char stage1_arr[] = { 'e','c','z','d','w','e','c','z','z','z','z','z','a','a','a','a','a','w','w','w','w','w','>','<' }; 
 char stage2_arr[] = { 'd','e','c','d','x','z','q','x','z','q','x','w','q','*','*' };
