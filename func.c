@@ -122,7 +122,7 @@ void printCanvas(Canvas theCanvas[], int first)
 {
 	int row_index = 0, col_index = 0;
 
-	printf("%5d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d%3d\n", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19);
+	printf("%5d%3d%3d%3d%3d%3d%3d%3d%3d%3d%4d%3d%3d%3d%3d%3d%3d%3d%3d%3d\n", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19);
 	for (row_index = 0; row_index < 20; ++row_index) 
 	{
 		// Print the row number
