@@ -29,7 +29,7 @@ do
 		break;
 	case 3:
 		system("cls");
-		start(canvasBoard,symbol);
+		start(canvasBoard,symbol, tutorial_arr, stage1_arr, stage2_arr);
 		// display level choice, 
 	case 4:
 		//exit
