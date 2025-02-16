@@ -17,8 +17,6 @@
 #include <math.h>
 #include <stdlib.h>
 #include <Windows.h>
-#include <time.h>
-#include <ctype.h>
 
 typedef struct coords
 {
@@ -55,17 +53,18 @@ void clearCanvas(Canvas theCanvas[], int first);
 
 // Game Stages
 
+
 void turtorialCanvas(Canvas theCanvas[]); 
-int turtorial();
 
-
-int stage_1(Canvas theCanvas[], char answer[]);
+void tutorial(Canvas theCanvas[], char tutorial_arr[]);
+ 
+int stage_1(Canvas canvasBoard[], char answer[]); 
 
 
 int stage_2();
 
 
-int stage_3();
+int create();
 
 // Game -> Functions
 
@@ -83,18 +82,15 @@ void check_mark(char canvas_array[][20], char guide_array[], char input_array[],
 void update_mark(char canvas_array[][20], char input_array[], int length, Coords point); 
 
 void createlvl_welcome_message(void);
-
 void create_rules(void);
-
 int dia_or_straight(void);
-
-int how_long(void);
-
 void inital_coord_input(Coords starting_point);
-
 void print_user_position(char user[], int* positionX, int* positionY, int index, Canvas canvasBoard[]);
-
 void print_lines(char user, int positionX, int positionY, Canvas canvasBoard[]);
+
+
+
+
 
 
 #endif
