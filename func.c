@@ -440,13 +440,6 @@ int dia_or_straight(void)
 	return result; 
 
 }
-int how_long(void)
-{
-	int result = 0;
-	printf("How long do you want to make the line?\n");
-	printf("%d", &result);
-	return result;   
-}
 void inital_coord_input(Coords starting_point)
 {
 	printf("Where do you want to starting point?\n"); 
