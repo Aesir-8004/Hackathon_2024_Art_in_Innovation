@@ -6,7 +6,7 @@ int main(void)
 Canvas canvasBoard[10];
 char symbol = ' ';
 char tutorial_arr[] = { 'e','d','c','z','x','a','q','w','o' };
-char stage1_arr[] = { 'e','c','z','d','w','e','c','z','z','z','z','z','a','a','a','a','a','w','w','w','w','w','>','<' }; 
+char stage1_arr[18] = { 'W','W','W','E','C','X','D','W','E','C','X','X','X','A','A','A','A','A' }; 
 char stage2_arr[] = { 'd','e','c','d','x','z','q','x','z','q','x','w','q','*','*' };
 
 
