@@ -1,5 +1,5 @@
 # This is a CrimsonCode 2025 Hackathon submission with the theme "Art in Innovation
-# Description: This is a Rhthym Game called Inkspire and its premise is that you can play the art that you create
+# Description: This is a Rhthym Game called Inkspire and its premise is that you can create art within this program.
 # This work is made by:
 
 # Ivan Itliong
@@ -10,4 +10,5 @@
 
 # Annamarie Corpuz
 
-# These are files that must implemented in VS Community ver 2022
+# These are files that must implemented in VS Community ver 2022.
+# There also exists the sln file within a zip file within this branch.
