@@ -892,7 +892,62 @@ int stage_2(Canvas canvasBoard[], char answer[]) {
 		printf("\033[0m");
 		//result
 
+		
+
 	}
+}
+void drawing_out_line(char board[][20], int row_size, int col_size, int row_choice, int col_choice, char symbol)
+{
+	
+	if (symbol == '_')
+	{
+
+		if (row_choice >= 0 && row_choice < row_size && col_choice >= 0 && col_choice < col_size)
+		{
+			board[row_choice][col_choice] = symbol;
+			board[row_choice][col_choice+1] = symbol;
+
+		}
+	}
+	else if (symbol == '|')
+	{
+
+			if (row_choice >= 0 && row_choice < row_size && col_choice >= 0 && col_choice < col_size)
+			{
+				board[row_choice][col_choice] = symbol; 
+				board[row_choice+1][col_choice] = symbol;  
+
+			}
+	}
+	else if (symbol == '/')
+	{
+			if (row_choice >= 0 && row_choice < row_size && col_choice >= 0 && col_choice < col_size)
+			{
+				
+					board[row_choice][col_choice] = symbol;
+					board[row_choice][col_choice-1] = symbol; 
+
+			}
+	}
+	else if (symbol == '\\')
+	{
+      	if (row_choice >= 0 && row_choice < row_size && col_choice >= 0 && col_choice < col_size)
+			{
+					board[row_choice][col_choice] = symbol;
+					board[row_choice][col_choice+1] = symbol;
+
+			}
+	}
+
+
+}
+
+int done_or_not(void)
+{
+	int result = 0;
+	printf("Are you done with your drawing?\n [1] Yes [2] No");
+	scanf("%d", &result);
+	return result; 
 }
 
 
