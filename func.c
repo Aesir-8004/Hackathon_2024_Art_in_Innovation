@@ -1,5 +1,5 @@
 
-#include"header.h"
+#include"Header.h"
 
 int menu(void)
 {
@@ -20,80 +20,80 @@ int menu(void)
 void print_rules(void)
 {
 	printf("Hello! Aren't you excited? Before we get into drawing, here is some control you need to know.\n");
-putchar('\n');
-printf("Main Controls:\n");
-printf("------------------------\n");
-printf("----- ");printf("----- ");printf("-----\n");
-printf("|"CYN"\\"CRESET"  |");printf("|  "CYN"|"CRESET" |");printf("|  "CYN"/"CRESET" |\n");
-printf("| "CYN"\\"CRESET" |");printf("|  "CYN"|"CRESET" |");printf("| "CYN"/"CRESET"  |\n");
-printf("----- ");printf("----- ");printf("-----\n"); 
-printf("----- ");printf("      ");printf("-----\n"); 
-printf("| "CYN"___"CRESET"|");printf("      ");printf("|"CYN"___"CRESET" |\n");
-printf("|    |");printf("      ");printf("|    |\n"); 
-printf("----- ");printf("      ");printf("----- \n");
-printf("----- ");printf("----- ");printf("-----\n");
-printf("|   "CYN"/"CRESET"|");printf("|  "CYN"|"CRESET"  |");printf("|"CYN"\\"CRESET"  |\n"); 
-printf("|  "CYN"/"CRESET" |");printf("|  "CYN"|"CRESET"  |");printf("| "CYN"\\"CRESET" |\n");  
-printf("----- ");printf("----- ");printf("-----\n");
-putchar('\n');
-putchar('\n');
-printf("      \\   /\n");
-printf("       \\ /\n");
-printf("        v\n");
-putchar('\n');
-putchar('\n');
+	putchar('\n');
+	printf("Main Controls:\n");
+	printf("------------------------\n");
+	printf("----- "); printf("----- "); printf("-----\n");
+	printf("|"CYN"\\"CRESET"  |"); printf("|  "CYN"|"CRESET" |"); printf("|  "CYN"/"CRESET" |\n");
+	printf("| "CYN"\\"CRESET" |"); printf("|  "CYN"|"CRESET" |"); printf("| "CYN"/"CRESET"  |\n");
+	printf("----- "); printf("----- "); printf("-----\n");
+	printf("----- "); printf("      "); printf("-----\n");
+	printf("| "CYN"___"CRESET"|"); printf("      "); printf("|"CYN"___"CRESET" |\n");
+	printf("|    |"); printf("      "); printf("|    |\n");
+	printf("----- "); printf("      "); printf("----- \n");
+	printf("----- "); printf("----- "); printf("-----\n");
+	printf("|   "CYN"/"CRESET"|"); printf("|  "CYN"|"CRESET"  |"); printf("|"CYN"\\"CRESET"  |\n");
+	printf("|  "CYN"/"CRESET" |"); printf("|  "CYN"|"CRESET"  |"); printf("| "CYN"\\"CRESET" |\n");
+	printf("----- "); printf("----- "); printf("-----\n");
+	putchar('\n');
+	putchar('\n');
+	printf("      \\   /\n");
+	printf("       \\ /\n");
+	printf("        v\n");
+	putchar('\n');
+	putchar('\n');
 
-printf("    [Q][W][E]\n");
-printf("    [A][S][D]\n");
-printf("    [X][Z][C]\n"); 
-putchar('\n');
-printf("Their is a corresponding\n"
-	"keystroke with the direction\n"
-	"the line will be drawn.\n");
+	printf("    [Q][W][E]\n");
+	printf("    [A][S][D]\n");
+	printf("    [X][Z][C]\n");
+	putchar('\n');
+	printf("Their is a corresponding\n"
+		"keystroke with the direction\n"
+		"the line will be drawn.\n");
 
-printf("------------------------\n"); 
-putchar('\n'); 
-printf(" --- --- ---\n");
-printf("|            |\n");
-printf("|     o      | <- press 'o' !\n");
-printf("|            |\n"); 
-printf(" --- --- ---\n");
-putchar('\n');  
-printf("After the main shape is\n");
-printf("draw, there will be a prompt\n");
-printf("where you click a specific\n");
-printf("keystroke.\n");
-putchar('\n');
-printf("------------------------\n");
+	printf("------------------------\n");
+	putchar('\n');
+	printf(" --- --- ---\n");
+	printf("|            |\n");
+	printf("|     o      | <- press 'o' !\n");
+	printf("|            |\n");
+	printf(" --- --- ---\n");
+	putchar('\n');
+	printf("After the main shape is\n");
+	printf("draw, there will be a prompt\n");
+	printf("where you click a specific\n");
+	printf("keystroke.\n");
+	putchar('\n');
+	printf("------------------------\n");
 
-system("pause");
-system("cls");
+	system("pause");
+	system("cls");
 
-printf("Accuracy:\n");
-printf("Wrong input will highlighted in" RED " RED" CRESET".\n");
-putchar('\n');
-printf("Right input: --- --- ---\n"); 
-putchar('\n');
-printf(" --- --- ---\n");
-printf("|            |\n");
-printf("|     o      | <- press 'o' !\n");
-printf("|            |\n");
-printf(" --- --- ---\n");
-putchar('\n');
-putchar('\n');
-printf("Wrong input: "RED" --- | --- "CRESET"\n");  
-putchar('\n');
-printf(RED"--- --- ---\n"); 
-printf("|            |\n"); 
-printf("|     i      | <-press 'o' !\n");
-printf("|            |\n");
-printf(" --- --- --- "CRESET"\n");
-printf("------------------------\n");
-system("pause");
-system("cls");
-	
-printf("Refer to the tutorial to get used to the controls! Happy drawing!\n");
-system("pause");
+	printf("Accuracy:\n");
+	printf("Wrong input will highlighted in" RED " RED" CRESET".\n");
+	putchar('\n');
+	printf("Right input: --- --- ---\n");
+	putchar('\n');
+	printf(" --- --- ---\n");
+	printf("|            |\n");
+	printf("|     o      | <- press 'o' !\n");
+	printf("|            |\n");
+	printf(" --- --- ---\n");
+	putchar('\n');
+	putchar('\n');
+	printf("Wrong input: "RED" --- | --- "CRESET"\n");
+	putchar('\n');
+	printf(RED"--- --- ---\n");
+	printf("|            |\n");
+	printf("|     i      | <-press 'o' !\n");
+	printf("|            |\n");
+	printf(" --- --- --- "CRESET"\n");
+	printf("------------------------\n");
+	system("pause");
+	system("cls");
+
+	printf("Refer to the tutorial to get used to the controls! Happy drawing!\n");
+	system("pause");
 }
 void start(Canvas theCanvas[], char symbol, char tutorial_arr[], char stage1_arr[], char stage2_arr[])
 {
@@ -106,7 +106,8 @@ void start(Canvas theCanvas[], char symbol, char tutorial_arr[], char stage1_arr
 	case 0:
 		// Tutorial 
 		system("cls");
-		printCanvas(theCanvas, 0);
+		turtorialCanvas(theCanvas); 
+		tutorial(theCanvas, tutorial_arr);
 		break;
 	case 1:
 		// Stage 1
@@ -134,7 +135,7 @@ void createCanvas(Canvas theCanvas[], char symbol, int first)
 {
 	// 4 20x20array
 	int row_index = 0, col_index = 0;
-	for (;first<=3; first++) 
+	for (; first <= 3; first++)
 	{
 		for (; row_index < 20; ++row_index) {
 			for (col_index = 0; col_index < 20; ++col_index) {
@@ -142,7 +143,7 @@ void createCanvas(Canvas theCanvas[], char symbol, int first)
 			}
 		}
 		row_index = 0;
-		col_index = 0; 
+		col_index = 0;
 	}
 }
 void printCanvas(Canvas theCanvas[], int first)
@@ -166,7 +167,7 @@ void printCanvas(Canvas theCanvas[], int first)
 void clearCanvas(Canvas theCanvas[], int first)
 {
 	int row_index = 0, col_index = 0;
-	for (; row_index < 20; ++row_index) 
+	for (; row_index < 20; ++row_index)
 	{
 		for (col_index = 0; col_index < 20; ++col_index) {
 			theCanvas[first].canvasBoard[row_index][col_index] = ' ';
@@ -373,7 +374,7 @@ void update_mark(char canvas_array[][20], char input_array[], int length, Coords
 			canvas_array[point.rows][point.cols] = '\\';
 			point.rows += 1;
 			point.cols += 1;
-			canvas_array[point.cols][point.rows] = '\\'; 
+			canvas_array[point.cols][point.rows] = '\\';
 
 		}
 	}
@@ -381,48 +382,48 @@ void update_mark(char canvas_array[][20], char input_array[], int length, Coords
 
 void createlvl_welcome_message(void)
 {
-	printf("Hey."); Sleep(1000); printf(" ."); Sleep(1000); printf(" ."); 
+	printf("Hey."); Sleep(1000); printf(" ."); Sleep(1000); printf(" .");
 	putchar('\n');
 	Sleep(2000);
-	printf("You did pretty great with drawing there!\n"); 
-	putchar('\n'); 
-	Sleep(2000); 
+	printf("You did pretty great with drawing there!\n");
+	putchar('\n');
+	Sleep(2000);
 	printf("Following the lines. . .\n");
-	putchar('\n'); 
-	Sleep(2000); 
-	printf("or" RED " not" CRESET ".\n");
-	putchar('\n'); 
-	Sleep(2000); 
-	printf("First I want to say sorry. . ."); 
-	putchar('\n'); 
-	Sleep(2000); 
-	printf("I'm sorry for thinking you straying away from the outline was " RED "wrong." CRESET); 
-	putchar('\n'); 
-	Sleep(2000); 
-	printf("There is no wrong in drawing! There never was");  
 	putchar('\n');
 	Sleep(2000);
-	printf("Straying away from the rules. . .\n"); 
-	putchar('\n'); 
+	printf("or" RED " not" CRESET ".\n");
+	putchar('\n');
+	Sleep(2000);
+	printf("First I want to say sorry. . .");
+	putchar('\n');
+	Sleep(2000);
+	printf("I'm sorry for thinking you straying away from the outline was " RED "wrong." CRESET);
+	putchar('\n');
+	Sleep(2000);
+	printf("There is no wrong in drawing! There never was");
+	putchar('\n');
+	Sleep(2000);
+	printf("Straying away from the rules. . .\n");
+	putchar('\n');
 	Sleep(2500);
-	printf(GRN". . . only means you'll make something new\n"CRESET); 
-	putchar('\n'); 
+	printf(GRN". . . only means you'll make something new\n"CRESET);
+	putchar('\n');
 	Sleep(3000);
-	printf("So go on! Draw new lines! Make new things!\n");   
-	putchar('\n'); 
+	printf("So go on! Draw new lines! Make new things!\n");
+	putchar('\n');
 	Sleep(2000);
 	printf("Because."); Sleep(1500); printf(" ."); Sleep(1500); printf(" .");
 	putchar('\n');
-		printf("That's the " RED "a" YLW "r" GRN "t" CRESET " in " CYN "i" BLU "n" MAG "n" RED "o" YLW "v" GRN "a" CYN "t" BLU "i" MAG "o" RED "n" CRESET "\n");  
-	putchar('\n'); 
+	printf("That's the " RED "a" YLW "r" GRN "t" " " CYN "i" BLU "n" MAG "n" RED "o" YLW "v" GRN "a" CYN "t" BLU "i" MAG "o" RED "n" CRESET "\n");
+	putchar('\n');
 	Sleep(1000);
-	printf(":)"); 
-	putchar('\n');  
-	putchar('\n'); 
-	Sleep(2000); 
-	printf("[Creative Mode is now unlocked]"); 
-	
-	
+	printf(":)");
+	putchar('\n');
+	putchar('\n');
+	Sleep(2000);
+	printf("[Creative Mode is now unlocked]");
+
+
 }
 
 void create_rules(void)
@@ -437,29 +438,29 @@ int dia_or_straight(void)
 {
 	int result = 0;
 	printf("Do you want to make a [1] straight line or [2] diagonal line\n");
-	scanf("%d", &result); 
-	return result; 
+	scanf("%d", &result);
+	return result;
 
 }
 void inital_coord_input(Coords starting_point)
 {
-	printf("Where do you want to starting point?\n"); 
+	printf("Where do you want to starting point?\n");
 	printf("X coord (1-20): ");
-	scanf("%d", starting_point.cols);  
+	scanf("%d", starting_point.cols);
 	printf("Y coord (1-20): ");
-	scanf("%d", starting_point.rows); 
+	scanf("%d", starting_point.rows);
 
 }
 void turtorialCanvas(Canvas theCanvas[])
 {
 	theCanvas[1].canvasBoard[3][8] = '_';
-	theCanvas[1].canvasBoard[3][9] = '_'; 
-	theCanvas[1].canvasBoard[3][10] = '_';  
-	theCanvas[1].canvasBoard[3][11] = '_'; 
-	theCanvas[1].canvasBoard[4][12] = '\\'; 
-	theCanvas[1].canvasBoard[5][13] = '\\'; 
-	theCanvas[1].canvasBoard[6][14] = '\\'; 
-	theCanvas[1].canvasBoard[7][15] = '\\'; 
+	theCanvas[1].canvasBoard[3][9] = '_';
+	theCanvas[1].canvasBoard[3][10] = '_';
+	theCanvas[1].canvasBoard[3][11] = '_';
+	theCanvas[1].canvasBoard[4][12] = '\\';
+	theCanvas[1].canvasBoard[5][13] = '\\';
+	theCanvas[1].canvasBoard[6][14] = '\\';
+	theCanvas[1].canvasBoard[7][15] = '\\';
 	theCanvas[1].canvasBoard[8][15] = '|';
 	theCanvas[1].canvasBoard[9][15] = '|';
 	theCanvas[1].canvasBoard[10][15] = '|';
@@ -484,7 +485,7 @@ void turtorialCanvas(Canvas theCanvas[])
 	theCanvas[1].canvasBoard[6][5] = '/';
 	theCanvas[1].canvasBoard[5][6] = '/';
 	theCanvas[1].canvasBoard[4][7] = '/';
-	printCanvas(theCanvas, 1);
+	theCanvas[1].canvasBoard[9][9] = 'O';
 
 }
 
@@ -492,7 +493,7 @@ void turtorialCanvas(Canvas theCanvas[])
 int stage_1(Canvas canvasBoard[], char answer[]) {
 	printf("\033[0m");
 	//holds what the user inputted
-	char user[18] = {'\0'};
+	char user[18] = { '\0' };
 
 	// Start position
 	int positionX = 4;
@@ -527,13 +528,13 @@ int stage_1(Canvas canvasBoard[], char answer[]) {
 	}
 }
 
-/* 
-Intput:		1. user[]:		User's input for character array 
+/*
+Intput:		1. user[]:		User's input for character array
 			2. *positionX:	Pointer of x position
 			3. *positionY:	Pointer of y position for where they currently are
 			4. index:		index for which character is being used for the array
 
- Info:		It will increase or decrease it's position depending on the character's input. 
+ Info:		It will increase or decrease it's position depending on the character's input.
 			It will not let them go out of bound.
 			If they try to write on top of where they already wrote, it will over write it
 
@@ -607,7 +608,7 @@ void print_user_position(char user[], int* positionX, int* positionY, int index,
 	else if (user[index] == 'X') {
 		if (*positionY >= 18) {// if it goes out of bound we will tell them they can't do that
 			printf("You cannot go out of bound");
-			print = 0; 
+			print = 0;
 		}
 		else {// if not it will print
 			*positionY += 2;
@@ -617,7 +618,7 @@ void print_user_position(char user[], int* positionX, int* positionY, int index,
 	else if (user[index] == 'C') {
 		if (*positionY >= 18 || *positionX >= 18) {// if it goes out of bound we will tell them they can't do that
 			printf("You cannot go out of bound");
-			print = 0; 
+			print = 0;
 		}
 		else {// if not it will print
 			*positionY += 2;
@@ -661,7 +662,7 @@ void print_user_position(char user[], int* positionX, int* positionY, int index,
 
 	if (print = 1) {
 		print_lines(user[index], *positionX, *positionY, canvasBoard);
-		}
+	}
 
 }
 
@@ -685,47 +686,47 @@ void print_lines(char user, int positionX, int positionY, Canvas canvasBoard[]) 
 
 	//canvasBoard[0] is where we save the user inputs
 	if (user == 'Q') {// '\'
-		canvasBoard[0].canvasBoard[positionY+1][positionX+1] = '\\';
+		canvasBoard[0].canvasBoard[positionY + 1][positionX + 1] = '\\';
 		canvasBoard[0].canvasBoard[positionY][positionX] = '\\';
 
 	}
 	else if (user == 'W') {// '|'
-		canvasBoard[0].canvasBoard[positionY+1][positionX] = '|';
+		canvasBoard[0].canvasBoard[positionY + 1][positionX] = '|';
 		canvasBoard[0].canvasBoard[positionY][positionX] = '|';
 
 	}
 	else if (user == 'E') {// '/'
-		canvasBoard[0].canvasBoard[positionY+1][positionX-1] = '/';
+		canvasBoard[0].canvasBoard[positionY + 1][positionX - 1] = '/';
 		canvasBoard[0].canvasBoard[positionY][positionX] = '/';
-		
+
 	}
 	else if (user == 'A') {// '_'
-		canvasBoard[0].canvasBoard[positionY][positionX+1] = '_';
+		canvasBoard[0].canvasBoard[positionY][positionX + 1] = '_';
 		canvasBoard[0].canvasBoard[positionY][positionX] = '_';
-		
+
 	}
 	else if (user == 'D') {// '_'
-		canvasBoard[0].canvasBoard[positionY][positionX-1] = '_';
+		canvasBoard[0].canvasBoard[positionY][positionX - 1] = '_';
 		canvasBoard[0].canvasBoard[positionY][positionX] = '_';
 
 	}
 	else if (user == 'Z') {// '/'
-		canvasBoard[0].canvasBoard[positionY-1][positionX+1] = '/';
+		canvasBoard[0].canvasBoard[positionY - 1][positionX + 1] = '/';
 		canvasBoard[0].canvasBoard[positionY][positionX] = '/';
-		
+
 	}
 	else if (user == 'X') {// '|'
-		canvasBoard[0].canvasBoard[positionY-1][positionX] = '|';
+		canvasBoard[0].canvasBoard[positionY - 1][positionX] = '|';
 		canvasBoard[0].canvasBoard[positionY][positionX] = '|';
-		
+
 	}
 	else if (user == 'C') {// '\'
-		canvasBoard[0].canvasBoard[positionY-1][positionX-1] = '\\';
+		canvasBoard[0].canvasBoard[positionY - 1][positionX - 1] = '\\';
 		canvasBoard[0].canvasBoard[positionY][positionX] = '\\';
-		
+
 	}
 	else if (user == 'O') {// 'O'
-		canvasBoard[0].canvasBoard[positionY][positionX] = 'O';
+		canvasBoard[0].canvasBoard[9][9] = 'O';
 	}
 	else {// prints what ever they input for example 'P'
 		canvasBoard[0].canvasBoard[positionY][positionX] = user;
@@ -733,4 +734,43 @@ void print_lines(char user, int positionX, int positionY, Canvas canvasBoard[]) 
 
 	//print board
 	printCanvas(canvasBoard, 0);
+}
+void tutorial(Canvas theCanvas[], char tutorial_arr[])
+{
+	printf("\033[0m");
+	//holds what the user inputted
+	char user[16] = { '\0' };
+
+	// Start position
+	int positionX = 7;
+	int positionY = 2;
+
+	// 1. initialize the userboard
+	clearCanvas(theCanvas, 0);
+
+	// 2. Print canvas
+	printCanvas(theCanvas, 0);
+
+
+	// 3. Tell the user what to press and get their input.
+	//	  We will loop this until the end of the answer array.
+	for (int index = 0; index < 16; index++)
+	{
+		printf("\033[0m");
+		printf("click %c !", tutorial_arr[index]); 
+		user[index] = ask_user_input();
+
+		// check if they are the same or not
+		if (tutorial_arr[index] != user[index]) 
+		{// print in red 
+			printf("\033[1;31m");
+		}
+		else {//print in white
+			printf("\033[0m");
+		}
+		print_user_position(user, &positionX, &positionY, index, theCanvas);
+		printf("\033[0m");
+		//result
+
+	}
 }
