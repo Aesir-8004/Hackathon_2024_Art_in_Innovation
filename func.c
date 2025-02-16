@@ -413,7 +413,7 @@ void createlvl_welcome_message(void)
 	Sleep(2000);
 	printf("Because."); Sleep(1500); printf(" ."); Sleep(1500); printf(" .");
 	putchar('\n');
-	printf("That's the " RED "a" YLW "r" GRN "t" " " CYN "i" BLU "n" MAG "n" RED "o" YLW "v" GRN "a" CYN "t" BLU "i" MAG "o" RED "n" CRESET "\n"); 
+		printf("That's the " RED "a" YLW "r" GRN "t" CRESET " in " CYN "i" BLU "n" MAG "n" RED "o" YLW "v" GRN "a" CYN "t" BLU "i" MAG "o" RED "n" CRESET "\n");  
 	putchar('\n'); 
 	Sleep(1000);
 	printf(":)"); 
