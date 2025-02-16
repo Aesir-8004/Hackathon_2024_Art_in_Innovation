@@ -46,26 +46,6 @@ int menu(void);
 
 void print_rules(void);
 
-void start(Canvas theCanvas[], char symbol);
-void createCanvas(Canvas theCanvas[], char symbol, int first);
-void printCanvas(Canvas theCanvas[], int first); 
-=======
-
-#include <stdio.h>
-#include <math.h>
-
-// Menu 
-
-void rules();
-
-void start();
-
-
-// Menu 
-int menu(void);
-
-void print_rules(void);
-
 void start(Canvas theCanvas[], char symbol, char tutorial_arr[], char stage1_arr[], char stage2_arr[]);
 void createCanvas(Canvas theCanvas[], char symbol, int first);
 void printCanvas(Canvas theCanvas[], int first);
