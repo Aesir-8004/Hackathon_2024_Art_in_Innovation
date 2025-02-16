@@ -164,7 +164,7 @@ char ask_user_input(void)
 	return user_input; 
 }
 
-void check_mark(char canvas_array[][MAX_COL], char guide_array[], char input_array[], int length, Coords point) 
+void check_mark(char canvas_array[][20], char guide_array[], char input_array[], int length, Coords point) 
 {
 	
 	for (int i = 0; i < length; i++)
@@ -271,7 +271,7 @@ void check_mark(char canvas_array[][MAX_COL], char guide_array[], char input_arr
 
 }
 
-void update_mark(char canvas_array[][MAX_COL], char input_array[], int length, Coords point)
+void update_mark(char canvas_array[][20], char input_array[], int length, Coords point)
 {
 	for (int i = 0; i < length; i++)
 	{
