@@ -104,7 +104,6 @@ void start(Canvas theCanvas[], char symbol)
 	case 4:
 		// Menu
 		system("cls");
-		menu();
 		break;
 	default:
 		printf("Error input");
