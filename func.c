@@ -138,3 +138,208 @@ void printCanvas(Canvas theCanvas[], int first)
 		putchar('\n');
 	}
 }
+
+int arr_length(char guide_array[])
+{
+// https://www.geeksforgeeks.org/length-of-array-in-c/
+
+	int size = 0; 
+	size = sizeof(guide_array) / sizeof(guide_array[0]);
+
+	return size; 
+}
+
+void print_what_to_input(char guide_array[], int length)
+{
+	for (int i = 0; i < length; i++)
+	{
+		printf("click %c !", guide_array[i]); 
+	}
+}
+
+char ask_user_input(void)
+{
+	char user_input = '\n';
+	scanf("%c", &user_input); 
+	return user_input; 
+}
+
+void check_mark(char canvas_array[][MAX_COL], char guide_array[], char input_array[], int length, Coords point) 
+{
+	
+	for (int i = 0; i < length; i++)
+	{
+		input_array[i] = ask_user_input(); 
+
+		if (input_array[i] == 'W') 
+		{
+			//vert 
+			if (input_array[i] == guide_array[i])
+			{ 
+				update_mark(canvas_array, input_array, length, point);  
+			}
+			else
+			{
+				update_mark(canvas_array, input_array, length, point);
+			}
+		}
+		else if (input_array[i] == 'A')
+		{
+			// hor
+			if (input_array[i] == guide_array[i])
+			{
+				update_mark(canvas_array, input_array, length, point);
+			}
+			else
+			{
+				update_mark(canvas_array, input_array, length, point);
+			}
+		}
+		else if (input_array[i] == 'Z') 
+		{
+			// vert
+			if (input_array[i] == guide_array[i])
+			{
+				update_mark(canvas_array, input_array, length, point);
+			}
+			else
+			{
+				update_mark(canvas_array, input_array, length, point);
+			}
+		}
+		else if (input_array[i] == 'D') 
+		{
+			// hor
+			if (input_array[i] == guide_array[i])
+			{
+				update_mark(canvas_array, input_array, length, point);
+			}
+			else
+			{
+				update_mark(canvas_array, input_array, length, point);
+			}
+		}
+		else if (input_array[i] == 'Q') 
+		{
+			//dia
+			if (input_array[i] == guide_array[i])
+			{
+				update_mark(canvas_array, input_array, length, point);
+			}
+			else
+			{
+				update_mark(canvas_array, input_array, length, point);
+			}
+		}
+		else if (input_array[i] == 'E') 
+		{
+			//dia
+			if (input_array[i] == guide_array[i])
+			{
+				update_mark(canvas_array, input_array, length, point); 
+			}
+			else
+			{
+				update_mark(canvas_array, input_array, length, point); 
+			}
+		}
+		else if (input_array[i] == 'X') 
+		{
+			//dia
+			if (input_array[i] == guide_array[i])
+			{
+				update_mark(canvas_array, input_array, length, point); 
+			}
+			else
+			{
+				update_mark(canvas_array, input_array, length, point); 
+			}
+		}
+		else if (input_array[i] == 'C') 
+		{
+			//dia
+			if (input_array[i] == guide_array[i]) 
+			{
+				update_mark(canvas_array, input_array, length, point); 
+			}
+			else
+			{
+				update_mark(canvas_array, input_array, length, point);
+			}
+		}
+	}
+
+}
+
+void update_mark(char canvas_array[][MAX_COL], char input_array[], int length, Coords point)
+{
+	for (int i = 0; i < length; i++)
+	{
+
+		if (input_array[i] == 'W')
+		{
+			// vert
+			canvas_array[point.rows][point.cols] = '|'; 
+			point.rows += 1;  
+			canvas_array[point.rows][point.cols] = '|';
+		}
+		else if (input_array[i] == 'A')
+		{
+			// hor
+			canvas_array[point.rows][point.cols] = '-';
+			point.cols += 1;
+			canvas_array[point.rows][point.cols] = '-';
+		}
+		else if (input_array[i] == 'Z')
+		{
+			// vert
+			canvas_array[point.rows][point.cols] = '|';
+			point.rows -= 1;
+			canvas_array[point.rows][point.cols] = '|';
+		}
+		else if (input_array[i] == 'D')
+		{
+			// hor
+			canvas_array[point.rows][point.cols] = '-';
+			point.cols -= 1; 
+			canvas_array[point.cols][point.rows] = '-';
+		}
+		else if (input_array[i] == 'Q')
+		{
+			//dia
+			point.rows += 1;
+			canvas_array[point.rows][point.cols] = '\\';
+			point.rows -= 1;
+			point.cols -= 1;
+			canvas_array[point.cols][point.rows] = '\\';
+
+		}
+		else if (input_array[i] == 'E')
+		{
+			//dia
+			point.rows += 1;
+			canvas_array[point.rows][point.cols] = '/';
+			point.rows -= 1;
+			point.cols += 1;
+			canvas_array[point.cols][point.rows] = '/';
+		}
+		else if (input_array[i] == 'X')
+		{
+			//dia
+			point.cols += 1;
+			canvas_array[point.rows][point.cols] = '/';
+			point.cols -= 1;
+			point.rows += 1; 
+			canvas_array[point.cols][point.rows] = '/';
+		}
+		else if (input_array[i] == 'C')
+		{
+			//dia
+			canvas_array[point.rows][point.cols] = '\\';
+			point.rows += 1; 
+			point.cols += 1;
+			canvas_array[point.cols][point.rows] = '\\';
+
+		}
+	}
+}
