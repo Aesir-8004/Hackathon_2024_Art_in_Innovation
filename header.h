@@ -18,6 +18,7 @@
 #include <stdlib.h>
 #include <Windows.h>
 #include <time.h>
+#include <ctype.h>
 
 typedef struct coords
 {
