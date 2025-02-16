@@ -2,14 +2,6 @@
 #define HEADER_H
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <stdio.h>
-#include <math.h>
-
-// Menu 
-
-void rules();
-
-void start();
 
 
 // Menu -> Settings
@@ -21,7 +13,6 @@ int volume();
 
 
 
-int turtorial();
 
 int stage_1();
 
@@ -33,12 +24,6 @@ int stage_3();
 // Game -> Functions
 
 int resultCompare();
-
-
-
-
-
-
 
 
 
