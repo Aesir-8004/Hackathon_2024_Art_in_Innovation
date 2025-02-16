@@ -77,7 +77,7 @@ void print_rules(void)
 	system("pause");
 
 }
-void start(void)
+void start(Canvas theCanvas[], char symbol)
 {
 	int choise = 0;
 	printf("0.Tutorial\n1.Stage 1\n2.Stage 2\n3.Create\nMenu");
@@ -87,6 +87,8 @@ void start(void)
 	{
 	case 0:
 		// Tutorial 
+		system("cls");
+		printCanvas(theCanvas, 0);
 		break;
 	case 1:
 		// Stage 1
