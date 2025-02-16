@@ -1,4 +1,3 @@
-
 #ifndef HEADER_H
 #define HEADER_H
 #define _CRT_SECURE_NO_WARNINGS
@@ -26,12 +25,16 @@
 typedef struct coords
 {
 	int rows, cols;
+
 }Coords;
+
 typedef struct markers
 {
 	Coords location;
+	Coords starting_point;
 
 }Markers;
+
 typedef struct canvas
 {
 	char canvasBoard[20][20];
@@ -41,24 +44,6 @@ typedef struct canvas
 
 }Canvas; 
 
-// Menu 
-int menu(void);
-
-void print_rules(void);
-
-void start(Canvas theCanvas[], char symbol);
-void createCanvas(Canvas theCanvas[], char symbol, int first);
-void printCanvas(Canvas theCanvas[], int first); 
-=======
-
-#include <stdio.h>
-#include <math.h>
-
-// Menu 
-
-void rules();
-
-void start();
 
 
 // Menu 
@@ -92,11 +77,11 @@ int stage_1(Canvas canvasBoard[], char answer[]);
 int stage_2(Canvas canvasBoard[], char answer[]);
 
 
-int create();
+int stage_3(Canvas canvasBoard[]);
 
 // Game -> Functions
 
-int resultCompare();
+// int resultCompare(); // unfinished
 
 //updates the canvas + user input
 
@@ -117,9 +102,13 @@ int dia_or_straight(void);
 void inital_coord_input(Coords starting_point);
 void print_user_position(char user[], int* positionX, int* positionY, int index, Canvas canvasBoard[]);
 void print_lines(char user, int positionX, int positionY, Canvas canvasBoard[]);
+void drawing_out_line(char board[][20], int row_size, int col_size, int row_choice, int col_choice, char symbol);
 
 void stage_2_canvas(Canvas theCanvas[]);
 void turtorialCanvas(Canvas theCanvas[]);
+
+int stage_3(Canvas canvasBoard[]);
+
 
 
 
