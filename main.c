@@ -3,32 +3,52 @@
 int main(void) 
 {
 	int menu_choice = 0; 
-	menu_choice = menu();  
+Canvas canvasBoard[10];
+char symbol = "-";
 
-		switch (menu_choice)
-		{
-		case 1: // rules 
-			system("cls"); 
-			print_rules();
-			system("cls"); 
-			menu();
-			break;
-		case 2: // settings
-			system("cls"); 
-			menu();
-			break;
-		case 3:
-			system("cls");  
-			//start
-			// display level choice, tut 1 2 3 
-		case 4:
-			//exit
-			break;
-		default:
-			printf("Error input");
-			break;
-		
-		}
+
+createCanvas(canvasBoard, symbol, 0);
+
+do
+{ 
+	menu_choice = menu();
+
+
+	switch (menu_choice)
+	{
+	case 1: // rules 
+		system("cls");
+		print_rules();
+		system("cls");
+		break;
+	case 2: // settings
+		system("cls");
+		break;
+	case 3:
+		system("cls");
+		start(canvasBoard,symbol);
+		// display level choice, 
+	case 4:
+		//exit
+		break;
+	default:
+		printf("Error input\n");
+		break;
+
+	}
+
+	if (menu_choice == 0)
+	{
+		printf("Catatsrophic Error!\n ");
+		break;
+	}
+
+} while (menu_choice != 4);
+
+
+
+
+
 
 	return 0;
 }
