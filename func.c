@@ -98,7 +98,7 @@ void print_rules(void)
 void start(Canvas theCanvas[], char symbol, char tutorial_arr[], char stage1_arr[], char stage2_arr[])
 {
 	int choise = 0;
-	printf("0.Tutorial\n1.Stage 1\n2.Stage 2\n3.Create\n4.Menu");
+	printf("0. Tutorial\n1. Stage 1\n2. Stage 2\n3. Create\n4. Menu\n");
 	scanf("%d", &choise);
 
 	switch (choise)
@@ -115,11 +115,12 @@ void start(Canvas theCanvas[], char symbol, char tutorial_arr[], char stage1_arr
 		break;
 	case 2:
 		// Stage 2
+		stage_2(theCanvas, stage2_arr);
 		break;
 	case 3:
 		// Create
-		system("cls");
-		printCanvas(theCanvas, 0);
+		create_rules();
+		stage_3(theCanvas);
 
 		break;
 	case 4:
@@ -729,11 +730,17 @@ void print_lines(char user, int positionX, int positionY, Canvas canvasBoard[]) 
 		canvasBoard[0].canvasBoard[9][9] = 'O';
 	}
 	else if (user == '*')
-		
+
 	{
-	canvasBoard[0].canvasBoard[3][4] = '*';
-	canvasBoard[0].canvasBoard[14][16] = '*';
+		canvasBoard[0].canvasBoard[3][4] = '*';
+		canvasBoard[0].canvasBoard[14][16] = '*';
+
 	}
+	else if (user == 'S')
+	{
+		
+	}
+	
 		
 	else {// prints what ever they input for example 'P'
 		canvasBoard[0].canvasBoard[positionY][positionX] = user;
@@ -942,12 +949,48 @@ void drawing_out_line(char board[][20], int row_size, int col_size, int row_choi
 
 }
 
-int done_or_not(void)
+int stage_3(Canvas canvasBoard[]) 
 {
-	int result = 0;
-	printf("Are you done with your drawing?\n [1] Yes [2] No");
-	scanf("%d", &result);
-	return result; 
+	printf("\033[0m");
+	//holds what the user inputted
+	char user[200] = { '\0' };
+
+	int positionX = 0;
+	int positionY = 0;
+
+	// Start position
+	printf("Where do you want to start on the Canvas\n");
+	printf("Input Y: ");
+	scanf("%d", &positionY);
+	printf("Input X: ");
+	scanf("%d", &positionX);
+
+
+	// 1. initialize the userboard
+	clearCanvas(canvasBoard, 0);
+
+	// 2. Print canvas
+	printCanvas(canvasBoard, 0);
+
+
+	// 3. Tell the user what to press and get their input.
+	//	  We will loop this until the end of the answer array.
+	for (int index = 0; index < 200; index++)
+	{
+		user[index] = ask_user_input();
+
+		
+		// check if they are the same or not
+		if (user[index] == 'S')
+		{
+			break;
+		}
+		else {//print in white
+			printf("\033[0m");
+		}
+		print_user_position(user, &positionX, &positionY, index, canvasBoard);
+		printf("\033[0m");
+		//result
+
+	}
 }
-
-
