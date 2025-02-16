@@ -358,3 +358,82 @@ void update_mark(char canvas_array[][20], char input_array[], int length, Coords
 		}
 	}
 }
+
+void createlvl_welcome_message(void)
+{
+	printf("Hey."); Sleep(1000); printf(" ."); Sleep(1000); printf(" ."); 
+	putchar('\n');
+	Sleep(2000);
+	printf("You did pretty great with drawing there!\n"); 
+	putchar('\n'); 
+	Sleep(2000); 
+	printf("Following the lines. . .\n");
+	putchar('\n'); 
+	Sleep(2000); 
+	printf("or" RED " not" CRESET ".\n");
+	putchar('\n'); 
+	Sleep(2000); 
+	printf("First I want to say sorry. . ."); 
+	putchar('\n'); 
+	Sleep(2000); 
+	printf("I'm sorry for thinking you straying away from the outline was " RED "wrong." CRESET); 
+	putchar('\n'); 
+	Sleep(2000); 
+	printf("There is no wrong in drawing! There never was");  
+	putchar('\n');
+	Sleep(2000);
+	printf("Straying away from the rules. . .\n"); 
+	putchar('\n'); 
+	Sleep(2500);
+	printf(GRN". . . only means you'll make something new\n"CRESET); 
+	putchar('\n'); 
+	Sleep(3000);
+	printf("So go on! Draw new lines! Make new things!\n");   
+	putchar('\n'); 
+	Sleep(2000);
+	printf("Because."); Sleep(1500); printf(" ."); Sleep(1500); printf(" .");
+	putchar('\n');
+	printf("That's the " RED "a" YLW "r" GRN "t" " " CYN "i" BLU "n" MAG "n" RED "o" YLW "v" GRN "a" CYN "t" BLU "i" MAG "o" RED "n" CRESET "\n"); 
+	putchar('\n'); 
+	Sleep(1000);
+	printf(":)"); 
+	putchar('\n');  
+	putchar('\n'); 
+	Sleep(2000); 
+	printf("[Creative Mode is now unlocked]"); 
+	
+	
+}
+
+void create_rules(void)
+{
+	printf("You can make a straight or diagonal line to make your shape!\n");
+	printf("Input how long you want your line to be and where you want your line to start.\n");
+	printf("Happy drawing!\n");
+}
+
+
+int dia_or_straight(void)
+{
+	int result = 0;
+	printf("Do you want to make a [1] straight line or [2] diagonal line\n");
+	scanf("%d", &result); 
+	return result; 
+
+}
+int how_long(void)
+{
+	int result = 0;
+	printf("How long do you want to make the line?\n");
+	printf("%d", &result);
+	return result;   
+}
+void inital_coord_input(Coords starting_point)
+{
+	printf("Where do you want to starting point?\n"); 
+	printf("X coord (1-20): ");
+	scanf("%d", starting_point.cols);  
+	printf("Y coord (1-20): ");
+	scanf("%d", starting_point.rows); 
+
+}
