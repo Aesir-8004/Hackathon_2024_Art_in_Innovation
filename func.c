@@ -343,3 +343,12 @@ void update_mark(char canvas_array[][MAX_COL], char input_array[], int length, C
 		}
 	}
 }
+void clearCanvas(Canvas theCanvas[], int first)
+{
+	int row_index = 0, col_index = 0;
+	for (; row_index < 20; ++row_index) {
+		for (col_index = 0; col_index < 20; ++col_index) {
+			theCanvas[first].canvasBoard[row_index][col_index] = '-';
+		}
+	}
+}
