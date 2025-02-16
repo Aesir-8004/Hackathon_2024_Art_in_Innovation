@@ -54,7 +54,7 @@ void clearCanvas(Canvas theCanvas[], int first);
 
 // Game Stages
 
-
+void turtorialCanvas(Canvas theCanvas[]); 
 int turtorial();
 
 
