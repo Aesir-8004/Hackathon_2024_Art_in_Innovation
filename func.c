@@ -81,17 +81,17 @@ printf("|            |\n");
 printf(" --- --- ---\n");
 putchar('\n');
 putchar('\n');
-printf("Wrong input: --- " RED "|" CRESET " ---\n"); 
+printf("Wrong input: "RED" --- | --- "CRESET"\n");  
 putchar('\n');
-printf(" --- --- ---\n"); 
+printf(RED"--- --- ---\n"); 
 printf("|            |\n"); 
-printf("|     "RED"i"CRESET"      | <-press 'o' !\n");
+printf("|     i      | <-press 'o' !\n");
 printf("|            |\n");
-printf(" --- --- ---\n"); 
+printf(" --- --- --- "CRESET"\n");
 printf("------------------------\n");
 system("pause");
 system("cls");
-
+	
 printf("Refer to the tutorial to get used to the controls! Happy drawing!\n");
 system("pause");
 }
