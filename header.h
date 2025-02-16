@@ -61,7 +61,7 @@ void tutorial(Canvas theCanvas[], char tutorial_arr[]);
 int stage_1(Canvas canvasBoard[], char answer[]); 
 
 
-int stage_2();
+int stage_2(Canvas canvasBoard[], char answer[]);
 
 
 int create();
@@ -87,6 +87,9 @@ int dia_or_straight(void);
 void inital_coord_input(Coords starting_point);
 void print_user_position(char user[], int* positionX, int* positionY, int index, Canvas canvasBoard[]);
 void print_lines(char user, int positionX, int positionY, Canvas canvasBoard[]);
+
+void stage_2_canvas(Canvas theCanvas[]);
+void turtorialCanvas(Canvas theCanvas[]);
 
 
 
