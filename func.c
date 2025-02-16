@@ -113,7 +113,7 @@ void createCanvas(Canvas theCanvas[], char symbol, int first)
 	int row_index = 0, col_index = 0;
 	for (; row_index < 20; ++row_index) {
 		for (col_index = 0; col_index < 20; ++col_index) {
-			theCanvas[first].canvasBoard[row_index][col_index] = '-';
+			theCanvas[first].canvasBoard[row_index][col_index] = symbol;
 		}
 	}
 
