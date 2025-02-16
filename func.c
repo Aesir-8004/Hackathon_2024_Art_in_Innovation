@@ -195,7 +195,7 @@ void print_what_to_input(char guide_array[], int length)
 char ask_user_input(void)
 {
 	char user_input = '\n';
-	scanf("%c", &user_input);
+	scanf(" %c", &user_input);
 	return toupper(user_input);
 }
 
