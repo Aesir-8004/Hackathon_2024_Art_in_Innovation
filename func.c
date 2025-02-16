@@ -493,3 +493,250 @@ void turtorialCanvas(Canvas theCanvas[])
 	printCanvas(theCanvas, 1);
 
 }
+
+
+int stage_1(Canvas canvasBoard[], char answer[]) {
+	printf("\033[0m");
+	//holds what the user inputted
+	char user[18] = {'\0'};
+
+	// Start position
+	int positionX = 4;
+	int positionY = 15;
+
+	// 1. initialize the userboard
+	clearCanvas(canvasBoard, 0);
+
+	// 2. Print canvas
+	printCanvas(canvasBoard, 0);
+
+
+	// 3. Tell the user what to press and get their input.
+	//	  We will loop this until the end of the answer array.
+	for (int index = 0; index < 18; index++)
+	{
+		printf("\033[0m");
+		printf("click %c !", answer[index]);
+		user[index] = ask_user_input();
+
+		// check if they are the same or not
+		if (answer[index] != user[index]) {// print in red
+			printf("\033[1;31m");
+		}
+		else {//print in white
+			printf("\033[0m");
+		}
+		print_user_position(user, &positionX, &positionY, index, canvasBoard);
+		printf("\033[0m");
+		//result
+
+	}
+}
+
+/* 
+Intput:		1. user[]:		User's input for character array 
+			2. *positionX:	Pointer of x position
+			3. *positionY:	Pointer of y position for where they currently are
+			4. index:		index for which character is being used for the array
+
+ Info:		It will increase or decrease it's position depending on the character's input. 
+			It will not let them go out of bound.
+			If they try to write on top of where they already wrote, it will over write it
+
+ Return:	None (But there will be pointers)
+*/
+void print_user_position(char user[], int* positionX, int* positionY, int index, Canvas canvasBoard[]) {
+	int print = 0; //0 = no 1 = yes
+	if (user[index] == 'Q') {
+		if (*positionY <= 1 || *positionX <= 1) {// if it goes out of bound we will tell them they can't do that
+			printf("You cannot go out of bound");
+			print = 0;
+		}
+		else {// if not it will print
+			*positionY -= 2;
+			*positionX -= 2;
+			print = 1;
+		}
+	}
+	else if (user[index] == 'W') {
+		if (*positionY <= 1) {// if it goes out of bound we will tell them they can't do that
+			printf("You cannot go out of bound");
+			print = 0;
+		}
+		else {// if not it will print
+			*positionY -= 2;
+			print = 1;
+		}
+	}
+	else if (user[index] == 'E') {
+		if (*positionY <= 1 || *positionX >= 18) {// if it goes out of bound we will tell them they can't do that
+			printf("You cannot go out of bound");
+			print = 0;
+		}
+		else {// if not it will print
+			*positionY -= 2;
+			*positionX += 2;
+			print = 1;
+		}
+	}
+	else if (user[index] == 'A') {
+		if (*positionX <= 1) {// if it goes out of bound we will tell them they can't do that
+			printf("You cannot go out of bound");
+			print = 0;
+		}
+		else {// if not it will print
+			*positionX -= 2;
+			print = 1;
+		}
+	}
+	else if (user[index] == 'D') {
+		if (*positionX >= 18) {// if it goes out of bound we will tell them they can't do that
+			printf("You cannot go out of bound");
+			print = 0;
+		}
+		else {// if not it will print
+			*positionX += 2;
+			print = 1;
+		}
+	}
+	else if (user[index] == 'Z') {
+		if (*positionY >= 18 || *positionX <= 1) {// if it goes out of bound we will tell them they can't do that
+			printf("You cannot go out of bound");
+			print = 0;
+		}
+		else {// if not it will print
+			*positionY += 2;
+			*positionX -= 2;
+			print = 1;
+		}
+	}
+	else if (user[index] == 'X') {
+		if (*positionY >= 18) {// if it goes out of bound we will tell them they can't do that
+			printf("You cannot go out of bound");
+			print = 0; 
+		}
+		else {// if not it will print
+			*positionY += 2;
+			print = 1;
+		}
+	}
+	else if (user[index] == 'C') {
+		if (*positionY >= 18 || *positionX >= 18) {// if it goes out of bound we will tell them they can't do that
+			printf("You cannot go out of bound");
+			print = 0; 
+		}
+		else {// if not it will print
+			*positionY += 2;
+			*positionX += 2;
+			print = 1;
+		}
+	}
+	else if (user[index] == 'O') {
+		if (index != 0) {
+			print_user_position(user, positionX, positionY, index - 1, canvasBoard);
+		}
+		else if (index == 0) {
+			*positionX += 2;
+		}
+
+		if (*positionY <= 1 || *positionY >= 18 || *positionX <= 0 || *positionX >= 19) {// if it goes out of bound we will tell them they can't do that
+			printf("You cannot go out of bound");
+			print = 0;
+		}
+		else {// if not it will print
+			print = 1;
+		}
+	}
+	else {
+		if (index != 0) {
+			print_user_position(user, positionX, positionY, index - 1, canvasBoard);
+		}
+		else if (index == 0) {
+			*positionX += 2;
+		}
+
+		if (*positionY <= 1 || *positionY >= 18 || *positionX <= 0 || *positionX >= 19) {// if it goes out of bound we will tell them they can't do that
+			printf("You cannot go out of bound");
+			print = 0;
+		}
+		else {// if not it will print
+			print = 1;
+		}
+	}
+
+
+	if (print = 1) {
+		print_lines(user[index], *positionX, *positionY, canvasBoard);
+		}
+
+}
+
+
+/*
+Input:		1. user:		Current user's input character
+			2. positionX:	Current position X
+			3. positionY:	Current position Y
+			4. canvasBoard:	Saves all the lines that user went through
+			5. index:		Shows which index they are currently at in the array so it will know which character to print
+
+Info:		Prints the line for what ever the user inputted.
+			If it's something else than the QWEADZXC or O, it will print that character
+
+Return:		None, just prints
+*/
+void print_lines(char user, int positionX, int positionY, Canvas canvasBoard[]) {
+
+	//clear board
+	system("cls");
+
+	//canvasBoard[0] is where we save the user inputs
+	if (user == 'Q') {// '\'
+		canvasBoard[0].canvasBoard[positionY+1][positionX+1] = '\\';
+		canvasBoard[0].canvasBoard[positionY][positionX] = '\\';
+
+	}
+	else if (user == 'W') {// '|'
+		canvasBoard[0].canvasBoard[positionY+1][positionX] = '|';
+		canvasBoard[0].canvasBoard[positionY][positionX] = '|';
+
+	}
+	else if (user == 'E') {// '/'
+		canvasBoard[0].canvasBoard[positionY+1][positionX-1] = '/';
+		canvasBoard[0].canvasBoard[positionY][positionX] = '/';
+		
+	}
+	else if (user == 'A') {// '_'
+		canvasBoard[0].canvasBoard[positionY][positionX+1] = '_';
+		canvasBoard[0].canvasBoard[positionY][positionX] = '_';
+		
+	}
+	else if (user == 'D') {// '_'
+		canvasBoard[0].canvasBoard[positionY][positionX-1] = '_';
+		canvasBoard[0].canvasBoard[positionY][positionX] = '_';
+
+	}
+	else if (user == 'Z') {// '/'
+		canvasBoard[0].canvasBoard[positionY-1][positionX+1] = '/';
+		canvasBoard[0].canvasBoard[positionY][positionX] = '/';
+		
+	}
+	else if (user == 'X') {// '|'
+		canvasBoard[0].canvasBoard[positionY-1][positionX] = '|';
+		canvasBoard[0].canvasBoard[positionY][positionX] = '|';
+		
+	}
+	else if (user == 'C') {// '\'
+		canvasBoard[0].canvasBoard[positionY-1][positionX-1] = '\\';
+		canvasBoard[0].canvasBoard[positionY][positionX] = '\\';
+		
+	}
+	else if (user == 'O') {// 'O'
+		canvasBoard[0].canvasBoard[positionY][positionX] = 'O';
+	}
+	else {// prints what ever they input for example 'P'
+		canvasBoard[0].canvasBoard[positionY][positionX] = user;
+	}
+
+	//print board
+	printCanvas(canvasBoard, 0);
+}
