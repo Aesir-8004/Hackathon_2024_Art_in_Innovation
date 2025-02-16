@@ -42,7 +42,7 @@ int menu(void);
 
 void print_rules(void);
 
-void start(Canvas theCanvas[], char symbol);
+void start(Canvas theCanvas[], char symbol, char tutorial_arr[], char stage1_arr[], char stage2_arr[]);
 void createCanvas(Canvas theCanvas[], char symbol, int first);
 void printCanvas(Canvas theCanvas[], int first);
 void clearCanvas(Canvas theCanvas[], int first);
@@ -59,7 +59,7 @@ void turtorialCanvas(Canvas theCanvas[]);
 int turtorial();
 
 
-int stage_1();
+int stage_1(Canvas theCanvas[], char answer[]);
 
 
 int stage_2();
