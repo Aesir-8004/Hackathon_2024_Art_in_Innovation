@@ -92,4 +92,9 @@ int how_long(void);
 
 void inital_coord_input(Coords starting_point);
 
+void print_user_position(char user[], int* positionX, int* positionY, int index, Canvas canvasBoard[]);
+
+void print_lines(char user, int positionX, int positionY, Canvas canvasBoard[]);
+
+
 #endif
