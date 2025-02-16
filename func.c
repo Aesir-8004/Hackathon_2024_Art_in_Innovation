@@ -19,62 +19,81 @@ int menu(void)
 }
 void print_rules(void)
 {
-	printf("Hello! Before we get into drawing, here is some control you need to know.\n");
-	putchar('\n');
-	printf("Main Controls:\n");
-	printf("------------------------\n");
-	printf("[Q][W][E]     [↖][↑][↗] \n");
-	printf("[A][S][D]  =  [←][ ][→] \n");
-	printf("[X][Z][C]     [↙][↓][↘] \n");
-	putchar('\n');
-	printf("Their is a corresponding\n"
-		"keystroke with the direction\n"
-		" the line will be drawn.\n");
+	printf("Hello! Aren't you excited? Before we get into drawing, here is some control you need to know.\n");
+putchar('\n');
+printf("Main Controls:\n");
+printf("------------------------\n");
+printf("----- ");printf("----- ");printf("-----\n");
+printf("|"CYN"\\"CRESET"  |");printf("|  "CYN"|"CRESET" |");printf("|  "CYN"/"CRESET" |\n");
+printf("| "CYN"\\"CRESET" |");printf("|  "CYN"|"CRESET" |");printf("| "CYN"/"CRESET"  |\n");
+printf("----- ");printf("----- ");printf("-----\n"); 
+printf("----- ");printf("      ");printf("-----\n"); 
+printf("| "CYN"___"CRESET"|");printf("      ");printf("|"CYN"___"CRESET" |\n");
+printf("|    |");printf("      ");printf("|    |\n"); 
+printf("----- ");printf("      ");printf("----- \n");
+printf("----- ");printf("----- ");printf("-----\n");
+printf("|   "CYN"/"CRESET"|");printf("|  "CYN"|"CRESET"  |");printf("|"CYN"\\"CRESET"  |\n"); 
+printf("|  "CYN"/"CRESET" |");printf("|  "CYN"|"CRESET"  |");printf("| "CYN"\\"CRESET" |\n");  
+printf("----- ");printf("----- ");printf("-----\n");
+putchar('\n');
+putchar('\n');
+printf("      \\   /\n");
+printf("       \\ /\n");
+printf("        v\n");
+putchar('\n');
+putchar('\n');
 
-	printf("------------------------\n");
-	putchar('\n');
-	printf(" --- --- ---\n");
-	printf("|            |\n");
-	printf("|     o      | <- press 'o' !\n");
-	printf("|            |\n");
-	printf(" --- --- ---\n");
-	putchar('\n');
-	printf("After the main shape is\n");
-	printf("draw, there will be a prompt\n");
-	printf("where you click a specific\n");
-	printf("keystroke.\n");
-	putchar('\n');
-	printf("------------------------\n");
+printf("    [Q][W][E]\n");
+printf("    [A][S][D]\n");
+printf("    [X][Z][C]\n"); 
+putchar('\n');
+printf("Their is a corresponding\n"
+	"keystroke with the direction\n"
+	"the line will be drawn.\n");
 
-	system("pause");
-	system("cls");
+printf("------------------------\n"); 
+putchar('\n'); 
+printf(" --- --- ---\n");
+printf("|            |\n");
+printf("|     o      | <- press 'o' !\n");
+printf("|            |\n"); 
+printf(" --- --- ---\n");
+putchar('\n');  
+printf("After the main shape is\n");
+printf("draw, there will be a prompt\n");
+printf("where you click a specific\n");
+printf("keystroke.\n");
+putchar('\n');
+printf("------------------------\n");
 
-	printf("Accuracy:\n");
-	printf("Wrong input will highlighted in" RED " RED" CRESET".\n");
-	putchar('\n');
-	printf("Right input: --- --- ---\n");
-	putchar('\n');
-	printf(" --- --- ---\n");
-	printf("|            |\n");
-	printf("|     o      | <- press 'o' !\n");
-	printf("|            |\n");
-	printf(" --- --- ---\n");
-	putchar('\n');
-	putchar('\n');
-	printf("Wrong input: --- " RED "|" CRESET " ---\n");
-	putchar('\n');
-	printf(" --- --- ---\n");
-	printf("|            |\n");
-	printf("|     "RED"i"CRESET"      | <-press 'o' !\n");
-	printf("|            |\n");
-	printf(" --- --- ---\n");
-	printf("------------------------\n");
-	system("pause");
-	system("cls");
+system("pause");
+system("cls");
 
-	printf("Refer to the tutorial to get used to the controls! Happy drawing!\n");
-	system("pause");
+printf("Accuracy:\n");
+printf("Wrong input will highlighted in" RED " RED" CRESET".\n");
+putchar('\n');
+printf("Right input: --- --- ---\n"); 
+putchar('\n');
+printf(" --- --- ---\n");
+printf("|            |\n");
+printf("|     o      | <- press 'o' !\n");
+printf("|            |\n");
+printf(" --- --- ---\n");
+putchar('\n');
+putchar('\n');
+printf("Wrong input: --- " RED "|" CRESET " ---\n"); 
+putchar('\n');
+printf(" --- --- ---\n"); 
+printf("|            |\n"); 
+printf("|     "RED"i"CRESET"      | <-press 'o' !\n");
+printf("|            |\n");
+printf(" --- --- ---\n"); 
+printf("------------------------\n");
+system("pause");
+system("cls");
 
+printf("Refer to the tutorial to get used to the controls! Happy drawing!\n");
+system("pause");
 }
 void start(Canvas theCanvas[], char symbol)
 {
