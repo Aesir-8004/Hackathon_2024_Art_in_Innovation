@@ -40,7 +40,7 @@ int menu(void);
 
 void print_rules(void);
 
-void start(void); 
+void start(Canvas theCanvas[], char symbol);
 void createCanvas(Canvas theCanvas[], char symbol, int first);
 void printCanvas(Canvas theCanvas[], int first); 
 
