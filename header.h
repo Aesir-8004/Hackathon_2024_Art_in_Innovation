@@ -80,10 +80,14 @@ void check_mark(char canvas_array[][20], char guide_array[], char input_array[],
 
 void update_mark(char canvas_array[][20], char input_array[], int length, Coords point); 
 
+void createlvl_welcome_message(void);
 
+void create_rules(void);
 
+int dia_or_straight(void);
 
+int how_long(void);
 
-
+void inital_coord_input(Coords starting_point);
 
 #endif
