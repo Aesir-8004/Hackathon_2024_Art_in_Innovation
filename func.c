@@ -121,8 +121,9 @@ void createCanvas(Canvas theCanvas[], char symbol, int first)
 				theCanvas[first].canvasBoard[row_index][col_index] = symbol;
 			}
 		}
+		row_index = 0;
+		col_index = 0; 
 	}
-
 }
 void printCanvas(Canvas theCanvas[], int first)
 {
@@ -434,5 +435,42 @@ void inital_coord_input(Coords starting_point)
 	scanf("%d", starting_point.cols);  
 	printf("Y coord (1-20): ");
 	scanf("%d", starting_point.rows); 
+
+}
+void turtorialCanvas(Canvas theCanvas[])
+{
+	theCanvas[1].canvasBoard[3][8] = '_';
+	theCanvas[1].canvasBoard[3][9] = '_'; 
+	theCanvas[1].canvasBoard[3][10] = '_';  
+	theCanvas[1].canvasBoard[3][11] = '_'; 
+	theCanvas[1].canvasBoard[4][12] = '\\'; 
+	theCanvas[1].canvasBoard[5][13] = '\\'; 
+	theCanvas[1].canvasBoard[6][14] = '\\'; 
+	theCanvas[1].canvasBoard[7][15] = '\\'; 
+	theCanvas[1].canvasBoard[8][15] = '|';
+	theCanvas[1].canvasBoard[9][15] = '|';
+	theCanvas[1].canvasBoard[10][15] = '|';
+	theCanvas[1].canvasBoard[11][15] = '|';
+	theCanvas[1].canvasBoard[12][15] = '/';
+	theCanvas[1].canvasBoard[13][14] = '/';
+	theCanvas[1].canvasBoard[14][13] = '/';
+	theCanvas[1].canvasBoard[15][12] = '/';
+	theCanvas[1].canvasBoard[15][11] = '_';
+	theCanvas[1].canvasBoard[15][10] = '_';
+	theCanvas[1].canvasBoard[15][9] = '_';
+	theCanvas[1].canvasBoard[15][8] = '_';
+	theCanvas[1].canvasBoard[15][7] = '\\';
+	theCanvas[1].canvasBoard[14][6] = '\\';
+	theCanvas[1].canvasBoard[13][5] = '\\';
+	theCanvas[1].canvasBoard[12][4] = '\\';
+	theCanvas[1].canvasBoard[11][4] = '|';
+	theCanvas[1].canvasBoard[10][4] = '|';
+	theCanvas[1].canvasBoard[9][4] = '|';
+	theCanvas[1].canvasBoard[8][4] = '|';
+	theCanvas[1].canvasBoard[7][4] = '/';
+	theCanvas[1].canvasBoard[6][5] = '/';
+	theCanvas[1].canvasBoard[5][6] = '/';
+	theCanvas[1].canvasBoard[4][7] = '/';
+	printCanvas(theCanvas, 1);
 
 }
