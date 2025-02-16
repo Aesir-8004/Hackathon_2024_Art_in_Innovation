@@ -67,6 +67,17 @@ int stage_3();
 
 int resultCompare();
 
+//updates the canvas + user input
+int arr_length(char guide_array[]); 
+
+void print_what_to_input(char guide_array[], int length);
+
+char ask_user_input(void); 
+
+void check_mark(char canvas_array[][MAX_COL], char guide_array[], char input_array[], int length, Coords point);
+
+void update_mark(char canvas_array[][MAX_COL], char input_array[], int length, Coords point);
+
 
 
 
