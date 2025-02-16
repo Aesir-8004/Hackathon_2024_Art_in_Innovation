@@ -728,6 +728,13 @@ void print_lines(char user, int positionX, int positionY, Canvas canvasBoard[]) 
 	else if (user == 'O') {// 'O'
 		canvasBoard[0].canvasBoard[9][9] = 'O';
 	}
+	else if (user == '*')
+		
+	{
+	canvasBoard[0].canvasBoard[3][4] = '*';
+	canvasBoard[0].canvasBoard[14][16] = '*';
+	}
+		
 	else {// prints what ever they input for example 'P'
 		canvasBoard[0].canvasBoard[positionY][positionX] = user;
 	}
@@ -774,3 +781,118 @@ void tutorial(Canvas theCanvas[], char tutorial_arr[])
 
 	}
 }
+
+void stage_2_canvas(Canvas theCanvas[])
+{
+	theCanvas[3].canvasBoard[6][2] = '_';
+	theCanvas[3].canvasBoard[6][3] = '_';
+	theCanvas[3].canvasBoard[6][4] = '_';
+	theCanvas[3].canvasBoard[6][5] = '_';
+
+	
+
+	theCanvas[3].canvasBoard[6][6] = '/';
+	theCanvas[3].canvasBoard[5][7] = '/';
+	theCanvas[3].canvasBoard[4][8] = '/';
+	theCanvas[3].canvasBoard[3][9] = '/';
+
+	
+	
+	theCanvas[3].canvasBoard[3][10] = '\\';
+	theCanvas[3].canvasBoard[4][11] = '\\';
+	theCanvas[3].canvasBoard[5][12] = '\\';
+	theCanvas[3].canvasBoard[6][13] = '\\';
+
+	
+
+	theCanvas[3].canvasBoard[6][14] = '_';
+	theCanvas[3].canvasBoard[6][15] = '_';
+	theCanvas[3].canvasBoard[6][16] = '_';
+	theCanvas[3].canvasBoard[6][17] = '_';
+
+	
+	
+	theCanvas[3].canvasBoard[8][17] = '/';
+	theCanvas[3].canvasBoard[9][16] = '/';
+	theCanvas[3].canvasBoard[10][15] = '/';
+	theCanvas[3].canvasBoard[11][14] = '/';
+
+	
+
+	theCanvas[3].canvasBoard[12][13] = '|';
+	theCanvas[3].canvasBoard[13][13] = '|';
+	theCanvas[3].canvasBoard[14][13] = '|';
+	theCanvas[3].canvasBoard[15][13] = '|';
+
+	
+
+	theCanvas[3].canvasBoard[16][13] = '\\';
+	theCanvas[3].canvasBoard[15][12] = '\\';
+	theCanvas[3].canvasBoard[14][11] = '\\';
+	theCanvas[3].canvasBoard[13][10] = '\\';
+
+	
+	
+	theCanvas[3].canvasBoard[13][9] = '/';
+	theCanvas[3].canvasBoard[14][8] = '/';
+	theCanvas[3].canvasBoard[15][7] = '/';
+	theCanvas[3].canvasBoard[16][6] = '/';
+
+	
+
+	theCanvas[3].canvasBoard[15][6] = '|';
+	theCanvas[3].canvasBoard[14][6] = '|';
+	theCanvas[3].canvasBoard[13][6] = '|';
+	theCanvas[3].canvasBoard[12][6] = '|';
+
+	
+	theCanvas[3].canvasBoard[11][5] = '\\';
+	theCanvas[3].canvasBoard[10][4] = '\\';
+	theCanvas[3].canvasBoard[9][3] = '\\';
+	theCanvas[3].canvasBoard[8][2] = '\\';
+
+	theCanvas[3].canvasBoard[3][4] = '*';
+	theCanvas[3].canvasBoard[14][16] = '*';
+
+	printCanvas(theCanvas, 3);
+}
+
+int stage_2(Canvas canvasBoard[], char answer[]) {
+	printf("\033[0m");
+	//holds what the user inputted
+	char user[20] = { '\0' };
+
+	// Start position
+	int positionX = 2;
+	int positionY = 6;
+
+	// 1. initialize the userboard
+	clearCanvas(canvasBoard, 0);
+
+	// 2. Print canvas
+	printCanvas(canvasBoard, 0);
+
+
+	// 3. Tell the user what to press and get their input.
+	//	  We will loop this until the end of the answer array.
+	for (int index = 0; index < 20; index++)
+	{
+		printf("\033[0m");
+		printf("click %c !", answer[index]);
+		user[index] = ask_user_input();
+
+		// check if they are the same or not
+		if (answer[index] != user[index]) {// print in red
+			printf("\033[1;31m");
+		}
+		else {//print in white
+			printf("\033[0m");
+		}
+		print_user_position(user, &positionX, &positionY, index, canvasBoard);
+		printf("\033[0m");
+		//result
+
+	}
+}
+
+
