@@ -9,12 +9,17 @@
 #define MAG "\x1b[35m"
 #define CYN  "\x1b[36m"
 #define CRESET "\x1b[0m"
+
 #define MAX_ROW 20;
 #define MAX_COL 20;
 
 
+
+
 #include <stdio.h>
 #include <math.h>
+
+
 #include <stdlib.h>
 #include <Windows.h>
 
@@ -33,7 +38,28 @@ typedef struct canvas
 	Markers M;
 
 
-}Canvas;
+
+}Canvas; 
+
+// Menu 
+int menu(void);
+
+void print_rules(void);
+
+void start(Canvas theCanvas[], char symbol);
+void createCanvas(Canvas theCanvas[], char symbol, int first);
+void printCanvas(Canvas theCanvas[], int first); 
+=======
+
+#include <stdio.h>
+#include <math.h>
+
+// Menu 
+
+void rules();
+
+void start();
+
 
 // Menu 
 int menu(void);
@@ -54,7 +80,9 @@ void clearCanvas(Canvas theCanvas[], int first);
 // Game Stages
 
 
+
 void turtorialCanvas(Canvas theCanvas[]); 
+
 
 void tutorial(Canvas theCanvas[], char tutorial_arr[]);
  
@@ -71,6 +99,7 @@ int create();
 int resultCompare();
 
 //updates the canvas + user input
+
 int arr_length(char guide_array[]);
 
 void print_what_to_input(char guide_array[], int length);
@@ -80,6 +109,7 @@ char ask_user_input(void);
 void check_mark(char canvas_array[][20], char guide_array[], char input_array[], int length, Coords point);
 
 void update_mark(char canvas_array[][20], char input_array[], int length, Coords point); 
+
 
 void createlvl_welcome_message(void);
 void create_rules(void);
