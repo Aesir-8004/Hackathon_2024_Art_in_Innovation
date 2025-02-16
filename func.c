@@ -195,7 +195,7 @@ char ask_user_input(void)
 {
 	char user_input = '\n';
 	scanf("%c", &user_input);
-	return user_input;
+	return toupper(user_input);
 }
 
 void check_mark(char canvas_array[][20], char guide_array[], char input_array[], int length, Coords point)
