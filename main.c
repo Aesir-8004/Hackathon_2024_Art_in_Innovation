@@ -4,7 +4,7 @@ int main(void)
 {
 	int menu_choice = 0; 
 Canvas canvasBoard[10];
-char symbol = "-";
+char symbol = '-';
 
 
 createCanvas(canvasBoard, symbol, 0);
