@@ -95,7 +95,7 @@ system("cls");
 printf("Refer to the tutorial to get used to the controls! Happy drawing!\n");
 system("pause");
 }
-void start(Canvas theCanvas[], char symbol)
+void start(Canvas theCanvas[], char symbol, char tutorial_arr[], char stage1_arr[], char stage2_arr[])
 {
 	int choise = 0;
 	printf("0.Tutorial\n1.Stage 1\n2.Stage 2\n3.Create\n4.Menu");
@@ -110,6 +110,7 @@ void start(Canvas theCanvas[], char symbol)
 		break;
 	case 1:
 		// Stage 1
+		stage_1(theCanvas, stage1_arr);
 		break;
 	case 2:
 		// Stage 2
