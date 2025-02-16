@@ -4,7 +4,7 @@
 int menu(void)
 {
 	int choice = 0;
-	printf("Game name!!\n");
+	printf("Inkspire\n");
 	printf("------------------------\n");
 	printf("[ 1 ] Rules\n");
 	printf("[ 2 ] Settings\n");
